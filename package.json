@@ -1,5 +1,5 @@
 {
-  "name": "node-zipfile-diff",
+  "name": "zipfile-diff",
   "version": "1.0.0",
   "description": "caculate diff between two zip files",
   "main": "index.js",

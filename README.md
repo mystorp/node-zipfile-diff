@@ -13,7 +13,7 @@ npm install zipfile-diff
 ### `entryDiff(file1, file2)`
 `Promise<Array<String>>`. 比较两个压缩包，成功时返回变更的 entry 数组。如：
 ```js
-var differ = require("node-zipfile-diff");
+var differ = require("zipfile-diff");
 
 differ.entryDiff("./v1.zip", "./v2.zip").then(function(entries){
     console.log(entries);
@@ -24,8 +24,8 @@ differ.entryDiff("./v1.zip", "./v2.zip").then(function(entries){
 ### `diff2zip(file1, file2)`
 `Promise<Stream>`. 比较两个压缩包，成功时返回 zip 输出流。如：
 ```js
-var differ = require("node-zipfile-diff");
-differ.entryDiff("./v1.zip", "./v2.zip").then(function(stream){
+var differ = require("zipfile-diff");
+differ.diff2zip("./v1.zip", "./v2.zip").then(function(stream){
     stream.pipe(fs.createReadStream("test.zip"));
 });
 ```
